@@ -1,5 +1,20 @@
 
     <div class="content">
+    
+    <%if user_signed_in?%>
+      <div class="welcome-mobile">
+              <h2 class="information">Welcome,</h2>
+              <h2 class="information"><%=current_user.username%></h2>
+      </div>
+<div class="buttons-mobile">
+    <button class="np-button bt2" id="bt2"> <%=link_to "Sign out",destroy_user_session_path, class: 'np-link-2',data: { "turbo-method": :delete }%></button>
+    <button class="np-button bt2" id="bt2"><%=link_to "NEW POST", new_post_path, class:"np-link"%></button>
+   
+    <%else%>
+    <div class="buttons-mobile">
+     <button class="np-button bt2" id="bt2"><%=link_to "SIGN IN", new_user_session_path, class:"np-link"%></button>
+      <%end%>
+</div>
        
             <% @posts.each do |post| %>
              <div class="posts" >
