@@ -5,12 +5,15 @@
 
         
         <%post.comments.each do |c| %>
+        <%if c!=nil%>
+        <%else%>
             <h1 class="author">
             <%= c.user.username %>
             </h1>
             <h2 class="comment-body">
             <%= c.body %>
             </h2>
+        <% end %>
         <% end %>
 
      

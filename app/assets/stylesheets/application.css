@@ -20,6 +20,7 @@
     padding: 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
+    transition: .3s;
 }
 
 html {
@@ -159,6 +160,11 @@ a {
     flex-direction: column;
 }
 
+.links-post {
+    display: flex;
+    gap: 32px;
+}
+
 .information {
     font-family: 'Bebas Neue', cursive;
     font-size: 30px;
@@ -275,7 +281,7 @@ a {
 }
 
 .comments {
-    padding-top: 32px;
+    padding-top: 0px;
 }
 
 .comment-body {
@@ -335,7 +341,7 @@ a {
     color: white;
     font-family: 'Bebas Neue', cursive;
     font-size: 24px;
-    margin-top: 8px;
+    margin-top: 16px;
     margin-bottom: 32px;
 }
 
@@ -377,4 +383,15 @@ a {
 
 .field {
     padding-top: 16px;
+}
+
+em {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 16px;
+    font-style: normal;
+    color: #909090;
+}
+
+#password {
+    padding-right: 16px;
 }
