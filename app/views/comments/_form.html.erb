@@ -1,8 +1,10 @@
-<h2 class="title" id="add-comment">Add a comment:</h2>
-
-    <%= form_with model: [@post, @post.comments.build ] do |form| %>
-        <%= form.text_area :body,id:"input-comment" %>
-        <br>
-        <button class="np-button bt2" id="create-comment">Create Comment</button>
-        
-    <% end %>
+<div class="comment-form">
+    <h2 class="title" id="add-comment">Add a comment:</h2>
+    
+        <%= form_with model: [@post, @post.comments.build ] do |form| %>
+            <%= form.text_area :body,id:"input-comment" %>
+            <br>
+            <button class="np-button bt2" id="create-comment">Create Comment</button>
+    
+        <% end %>
+</div>

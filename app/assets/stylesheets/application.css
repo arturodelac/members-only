@@ -105,6 +105,7 @@ html {
     color: #707070;
     width: calc(100% - 92px);
     white-space: break-spaces;
+    margin-bottom: 8px;
 }
 
 .read-more {
@@ -237,7 +238,7 @@ a {
 }
 
 #read-more {
-    margin-top: 48px;
+    margin-top: 32px;
     width: 128px;
     height: 48px;
     background-color: black;
@@ -404,6 +405,10 @@ em {
     display: none;
 }
 
+#member-o {
+    margin-top: 32px;
+}
+
 @media only screen and (max-width: 1200px) {
     .buttons-mobile {
         padding-left: 32px;
@@ -432,11 +437,17 @@ em {
         padding-left: 32px;
         padding-top: 16px;
     }
+    #show {
+        max-height: fit-content;
+    }
     .post-title {
         font-size: 48px;
     }
     .post-body {
         font-size: 18px;
+    }
+    .post-body-no-overflow {
+        width: calc(100% - 32px);
     }
     .np-link {
         font-size: 18px;
@@ -479,14 +490,27 @@ em {
     #input-comment {
         width: 80%;
     }
-}
-
-.notification {
-    top: 0px;
-    left: 30%;
-    width: 40%;
-}
-
-.author {
-    padding-right: 32px;
+    .notification {
+        top: 0px;
+        left: 30%;
+        width: 40%;
+    }
+    .author {
+        padding-right: 32px;
+    }
+    .links-post {
+        margin-right: 32px;
+    }
+    .comment-form {
+        margin-left: 32px;
+    }
+    .comments {
+        margin-left: 32px;
+        margin-bottom: 64px;
+    }
+    #create-comment {
+        max-width: 200px;
+        font-size: 18px;
+        width: 43%;
+    }
 }
