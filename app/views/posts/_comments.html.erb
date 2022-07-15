@@ -1,0 +1,22 @@
+<div class="comments">
+
+    <%if user_signed_in?%>
+        <h2 class="title">Comments</h2>
+
+        
+        <%post.comments.each do |c| %>
+            <h1 class="author">
+            <%= c.user.username %>
+            </h1>
+            <h2 class="comment-body">
+            <%= c.body %>
+            </h2>
+        <% end %>
+
+     
+
+    <% else %>
+    <h2 class="title">MEMBERS ONLY!</h2>
+    <% end %>
+
+</div>

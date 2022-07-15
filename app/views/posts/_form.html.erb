@@ -1,0 +1,21 @@
+<%= form_with model: post do |form| %>
+  <div class="field">
+    <%= form.label :title ,class:"author"  %><br>
+    <%= form.text_field :title ,class:"new-title"%>
+    <% post.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body,class:"author"  %><br>
+    <%= form.text_area :body ,id:"input-comment" %><br>
+    <% post.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+  <button class="np-button bt2" id="create-post">Create Post</button>
+  </div>
+<% end %>

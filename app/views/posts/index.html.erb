@@ -1,0 +1,17 @@
+
+    <div class="content">
+       
+            <% @posts.each do |post| %>
+             <div class="posts" >
+            <h1 class="post-title"><%=post.title%></h1>
+            <h1 class="post-body"><%=post.body%></h1>
+             <div class="posts-control">
+                <button class="np-button bt2" id="read-more"><%=link_to "Read more...",post%></button>
+                <%if user_signed_in?%>
+                <h1 class="author">by <%=post.user.username%></h1>
+                <%end%>
+             </div>
+            </div>
+            <% end%>
+        
+    </div>

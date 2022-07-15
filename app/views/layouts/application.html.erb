@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MembersOnly</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+<div class="main-content">
+  <div class="navbar"><h1 class="title"><%=link_to "Members Only",root_path,id:"title"%></h1></div>   
+  <% if flash[:notice]%>
+    <div class="notification">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    </div>
+  <% end%>
+   <% if flash[:alert]%>
+    <div class="notification">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    </div>
+  <% end%>
+
+  <div class="user-info">
+    <div class="user-text">
+    <%if user_signed_in?%>
+      <h2 class="information">Welcome,</h2> 
+      <h2 class="information"><%=current_user.username%></h2> 
+    </div>
+ 
+    <button class="np-button"> <%=link_to "Sign out",destroy_user_session_path, class: 'np-link-2',data: { "turbo-method": :delete }%></button>
+    <button class="np-button bt2" id="bt2"><%=link_to "NEW POST", new_post_path, class:"np-link"%></button>
+   
+    <%else%>
+    </div>
+     <button class="np-button bt2" id="bt2"><%=link_to "SIGN IN", new_user_session_path, class:"np-link"%></button>
+      <%end%>
+      
+  </div>
+
+
+  
+    <%= yield %>
+    </div>
+  </body>
+</html>

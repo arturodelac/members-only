@@ -1,0 +1,380 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+html {
+    background-color: white;
+}
+
+.navbar {
+    grid-area: 1/1/2/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    border-color: lightgray;
+}
+
+#title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    color: black;
+}
+
+.title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 256px 1fr 384px;
+    height: 100vh;
+    grid-template-rows: 128px 1fr;
+}
+
+.content {
+    padding-top: 32px;
+    background-color: white;
+    border-radius: 16px;
+    grid-area: 2/2/3/3;
+    overflow: scroll;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.post-title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.post-body {
+    padding-top: 0px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -.5px;
+    color: #707070;
+    overflow: hidden;
+    white-space: nowrap;
+    width: calc(100% - 92px);
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+#show {
+    max-height: 100%;
+}
+
+.post-body-no-overflow {
+    padding-top: 0px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -.5px;
+    color: #707070;
+    width: calc(100% - 92px);
+    white-space: break-spaces;
+}
+
+.read-more {
+    padding-top: 32px;
+    font-weight: 100;
+    text-decoration: none;
+    color: #606060;
+    /* align-self: flex-start; */
+    margin-left: auto;
+    font-size: 16px;
+}
+
+a {
+    font-weight: 100;
+    text-decoration: none;
+    color: #909090;
+    /* align-self: flex-start; */
+    margin-left: auto;
+    font-size: 16px;
+}
+
+.posts {
+    border-bottom: 1px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    border-color: lightgray;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    max-height: 256px;
+}
+
+.user-info {
+    grid-area: 2/3/3/4;
+    border-bottom: 0;
+    border-top: 0;
+    border-left: 1px;
+    border-right: 0;
+    border-style: solid;
+    border-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.information {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+}
+
+.np-button {
+    margin-top: auto;
+    width: 100%;
+    height: 48px;
+    background-color: white;
+    border: 1px;
+    border-style: solid;
+}
+
+.np-button:hover {
+    background-color: black
+}
+
+#bt2:hover {
+    background-color: white;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.np-button:hover>a {
+    color: white;
+}
+
+.np-link {
+    font-size: 24px;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+}
+
+.np-link-2 {
+    font-size: 24px;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+}
+
+#bt2:hover>a {
+    color: black;
+}
+
+#bt2 {
+    background-color: black;
+    border: 0;
+    border-style: solid;
+    margin-top: 32px;
+}
+
+#read-more>a {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+}
+
+#read-more:hover>a {
+    font-family: 'Bebas Neue', cursive;
+    color: black;
+}
+
+#read-more:hover {
+    background-color: white;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+#read-more {
+    margin-top: 48px;
+    width: 128px;
+    height: 48px;
+    background-color: black;
+    border: 1px;
+    border-style: solid;
+}
+
+.notification {
+    background-color: black;
+    border: 0;
+    border-style: solid;
+    position: fixed;
+    top: 128px;
+    left: 40%;
+    right: 50%;
+    height: 48px;
+    width: 20%;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-right: auto;
+}
+
+.notification>p {
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+}
+
+.posts-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author {
+    align-self: flex-end;
+    font-size: 24px;
+    color: #2e2e2e;
+    font-family: 'Bebas Neue', cursive;
+    padding-right: 92px;
+}
+
+.comments {
+    padding-top: 32px;
+}
+
+.comment-body {
+    font-size: 20px;
+    color: #606060;
+    padding-bottom: 16px;
+    letter-spacing: -.5px;
+}
+
+#add-comment {
+    margin-top: 16px;
+}
+
+#input-comment {
+    border-radius: 0px;
+    background-color: white;
+    height: 64px;
+    width: 512px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #2e2e2e;
+    border-radius: 0px;
+    background-color: white;
+    font-size: 16px;
+    resize: none;
+}
+
+#create-post {
+    width: 200px;
+    background-color: black;
+    border: 0;
+    border-style: solid;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+#create-comment {
+    width: 200px;
+    background-color: black;
+    border: 0;
+    border-style: solid;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+
+#log-in {
+    width: 100px;
+    background-color: black;
+    border: 0;
+    border-style: solid;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+
+#linkbt {
+    width: 200px;
+}
+
+.log-input {
+    border-radius: 0px;
+    background-color: white;
+    height: 64px;
+    width: 512px;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    border: 1px solid #2e2e2e;
+    border-radius: 0px;
+    background-color: white;
+    font-size: 20px;
+    resize: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+.new-title {
+    border-radius: 0px;
+    background-color: white;
+    height: 40px;
+    width: 512px;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    border: 1px solid #2e2e2e;
+    border-radius: 0px;
+    background-color: white;
+    font-size: 20px;
+    resize: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+.field {
+    padding-top: 16px;
+}
